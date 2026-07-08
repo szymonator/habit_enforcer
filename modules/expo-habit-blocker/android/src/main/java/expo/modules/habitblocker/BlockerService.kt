@@ -2,6 +2,7 @@ package expo.modules.habitblocker
 
 import android.app.Notification
 import android.app.NotificationChannel
+import android.app.PendingIntent
 import android.app.NotificationManager
 import android.app.Service
 import android.app.usage.UsageEvents
@@ -16,6 +17,7 @@ import android.os.Build
 import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
+import android.os.PowerManager
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
@@ -40,6 +42,7 @@ class BlockerService : Service() {
     private var targetDurationSeconds: Int = 900 // Default 15 minutes
     private var elapsedTimeSeconds: Int = 0
     private var isTestMode: Boolean = false
+    private var alarmId: Int = -1
     private var lastDetectedPackage: String? = null
 
     private lateinit var sharedPreferences: SharedPreferences
@@ -50,7 +53,7 @@ class BlockerService : Service() {
 
     companion object {
         const val NOTIFICATION_ID = 8888
-        const val CHANNEL_ID = "habit_blocker_service_channel"
+        const val CHANNEL_ID = "habit_blocker_service_channel_v2"
         const val PREFS_NAME = "HabitBlockerPrefs"
         const val KEY_ELAPSED_TIME = "elapsed_time_seconds"
         const val KEY_LAST_DATE = "last_block_date"
@@ -66,26 +69,59 @@ class BlockerService : Service() {
         return if (isTestMode) {
             "elapsed_time_test_${targetPackageName}"
         } else {
-            "elapsed_time_${targetPackageName}_${currentDate}"
+            "elapsed_time_schedule_${alarmId}_${currentDate}"
         }
+    }
+
+    private fun stopServiceEarly() {
+        createNotificationChannel()
+        val notification = createNotification("Habit Block Active", "Finished tracking.")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
+        } else {
+            startForeground(NOTIFICATION_ID, notification)
+        }
+        stopSelf()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         targetPackageName = intent?.getStringExtra("targetPackageName") ?: ""
         targetDurationSeconds = intent?.getIntExtra("durationSeconds", 900) ?: 900
         isTestMode = intent?.getBooleanExtra("isTest", false) ?: false
+        alarmId = intent?.getIntExtra("alarmId", -1) ?: -1
 
         if (targetPackageName.isEmpty()) {
-            stopSelf()
+            stopServiceEarly()
             return START_NOT_STICKY
         }
 
         // Initialize state
         val currentDate = getCurrentDateString()
-        elapsedTimeSeconds = sharedPreferences.getInt(getPrefsKey(currentDate), 0)
+        val prefsKey = getPrefsKey(currentDate)
+
+        if (isTestMode) {
+            // Tests always start fresh — clear any previous test progress
+            sharedPreferences.edit().remove(prefsKey).apply()
+            elapsedTimeSeconds = 0
+        } else {
+            elapsedTimeSeconds = sharedPreferences.getInt(prefsKey, 0)
+
+            // Habit already completed for today — stop silently
+            // (the next day's alarm is already scheduled by BlockerReceiver)
+            if (elapsedTimeSeconds >= targetDurationSeconds) {
+                stopServiceEarly()
+                return START_NOT_STICKY
+            }
+        }
 
         createNotificationChannel()
-        val notification = createNotification("Habit Block Active", "Tracking usage of the target app.")
+        val foregroundApp = getForegroundPackageName()
+        val isUserInBlockerApp = foregroundApp == packageName
+        val notification = createNotification(
+            "Habit Block Active",
+            "Tracking usage of the target app.",
+            silent = !isUserInBlockerApp
+        )
         
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
@@ -104,26 +140,57 @@ class BlockerService : Service() {
         return sdf.format(java.util.Date())
     }
 
+    private fun isScreenInteractive(): Boolean {
+        val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
+            powerManager.isInteractive
+        } else {
+            @Suppress("DEPRECATION")
+            powerManager.isScreenOn
+        }
+    }
+
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val serviceChannel = NotificationChannel(
                 CHANNEL_ID,
                 "Habit Blocker Service Channel",
-                NotificationManager.IMPORTANCE_LOW
+                NotificationManager.IMPORTANCE_HIGH
             )
             val manager = getSystemService(NotificationManager::class.java)
             manager.createNotificationChannel(serviceChannel)
         }
     }
 
-    private fun createNotification(title: String, text: String): Notification {
-        return NotificationCompat.Builder(this, CHANNEL_ID)
+    private fun createNotification(title: String, text: String, silent: Boolean = true): Notification {
+        val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
+        val contentPendingIntent = if (launchIntent != null) {
+            PendingIntent.getActivity(
+                this,
+                0,
+                launchIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+        } else {
+            null
+        }
+
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(text)
             .setSmallIcon(android.R.drawable.ic_lock_lock)
-            .setPriority(NotificationCompat.PRIORITY_LOW)
-            .setSilent(true)
-            .build()
+            .setContentIntent(contentPendingIntent)
+            .setOnlyAlertOnce(true)
+
+        if (silent) {
+            builder.setPriority(NotificationCompat.PRIORITY_LOW)
+                .setSilent(true)
+        } else {
+            builder.setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(Notification.DEFAULT_ALL)
+        }
+
+        return builder.build()
     }
 
     private fun setupOverlay() {
@@ -275,7 +342,7 @@ class BlockerService : Service() {
                 val isTargetActive = foregroundApp == targetPackageName
                 val shouldBypass = isTargetActive || bypassPackages.contains(foregroundApp)
 
-                if (isTargetActive) {
+                if (isTargetActive && isScreenInteractive()) {
                     elapsedTimeSeconds++
                     val currentDate = getCurrentDateString()
                     sharedPreferences.edit().putInt(getPrefsKey(currentDate), elapsedTimeSeconds).apply()
@@ -373,7 +440,9 @@ class BlockerService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         hideOverlay()
-        handler.removeCallbacks(checkRunnable)
+        if (::checkRunnable.isInitialized) {
+            handler.removeCallbacks(checkRunnable)
+        }
     }
 
     override fun onBind(intent: Intent?): IBinder? {

@@ -30,6 +30,9 @@ const withHabitBlockerPlugin = (config) => {
       },
       {
         "android:name": "android.permission.POST_NOTIFICATIONS"
+      },
+      {
+        "android:name": "android.permission.RECEIVE_BOOT_COMPLETED"
       }
     ];
 
@@ -93,6 +96,33 @@ const withHabitBlockerPlugin = (config) => {
           "android:enabled": "true",
           "android:exported": "false"
         }
+      });
+    }
+
+    // Register BootReceiver for re-scheduling alarms after device reboot
+    const bootReceiverName = "expo.modules.habitblocker.BootReceiver";
+    const bootReceiverExists = application.receiver.some(
+      (r) => r.$["android:name"] === bootReceiverName
+    );
+
+    if (!bootReceiverExists) {
+      application.receiver.push({
+        $: {
+          "android:name": bootReceiverName,
+          "android:enabled": "true",
+          "android:exported": "true"
+        },
+        "intent-filter": [
+          {
+            action: [
+              {
+                $: {
+                  "android:name": "android.intent.action.BOOT_COMPLETED"
+                }
+              }
+            ]
+          }
+        ]
       });
     }
 

@@ -3,38 +3,53 @@
 # dependencies
 node_modules/
 
+# Module build artifacts
+modules/*/build/
+modules/*/android/build/
+modules/*/android/.gradle/
+modules/*/android/.cxx/
+modules/*/node_modules/
+modules/**/.expo/
+
 # Expo
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native Android / Gradle
 .kotlin/
-*.orig.*
+.gradle/
+build/
+local.properties
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig.*
 
-# Metro
-.metro-health-check*
+# IDEs & editors
+.idea/
+*.iml
+.vscode/
+.history/
+.expo-shared/
 
-# debug
+# Debug and Logs
+*.log
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
+# OS generated files
 .DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # generated native folders
 /ios

@@ -79,7 +79,7 @@ export default function ScheduleEditor({
       return;
     }
 
-    let targetId = Date.now();
+    let targetId = Math.floor(Math.random() * 100000000);
     let updatedSchedules = [...schedules];
 
     if (editingSchedule) {
@@ -177,7 +177,7 @@ export default function ScheduleEditor({
           onPress={onLoadApps}
         >
           <Text style={selectedApp ? styles.appSelectorTextActive : styles.appSelectorTextPlaceholder}>
-            {selectedApp ? `${selectedApp.label} (${selectedApp.packageName})` : 'Choose stretching/habit app...'}
+            {selectedApp ? `${selectedApp.label} (${selectedApp.packageName})` : 'Choose habit app...'}
           </Text>
         </TouchableOpacity>
 
@@ -196,13 +196,6 @@ export default function ScheduleEditor({
             maximumTrackTintColor={colors.bgInputBorder}
             thumbTintColor={colors.textPrimary}
           />
-          <View style={styles.sliderLabels}>
-            <Text style={styles.sliderLabelText}>0m</Text>
-            <Text style={styles.sliderLabelText}>15m</Text>
-            <Text style={styles.sliderLabelText}>30m</Text>
-            <Text style={styles.sliderLabelText}>45m</Text>
-            <Text style={styles.sliderLabelText}>60m</Text>
-          </View>
         </View>
 
         <Text style={styles.inputLabel}>3. Daily Block Trigger Time</Text>

@@ -2,7 +2,6 @@ package expo.modules.habitblocker
 
 import android.app.AlarmManager
 import android.app.AppOpsManager
-import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -11,7 +10,6 @@ import android.provider.Settings
 import androidx.core.content.ContextCompat
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
-import java.util.Calendar
 
 class HabitBlockerModule : Module() {
   private val context: Context
@@ -109,78 +107,13 @@ class HabitBlockerModule : Module() {
     }
 
     Function("scheduleDailyBlock") { id: Int, hour: Int, minute: Int, targetPackage: String, durationSeconds: Int ->
-      val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-      val intent = Intent(context, BlockerReceiver::class.java).apply {
-        putExtra("targetPackageName", targetPackage)
-        putExtra("durationSeconds", durationSeconds)
-      }
-      val pendingIntent = PendingIntent.getBroadcast(
-        context,
-        id,
-        intent,
-        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-      )
-
-      val calendar = Calendar.getInstance().apply {
-        timeInMillis = System.currentTimeMillis()
-        set(Calendar.HOUR_OF_DAY, hour)
-        set(Calendar.MINUTE, minute)
-        set(Calendar.SECOND, 0)
-        if (timeInMillis <= System.currentTimeMillis()) {
-          add(Calendar.DAY_OF_YEAR, 1)
-        }
-      }
-
-      val canScheduleExact = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-        alarmManager.canScheduleExactAlarms()
-      } else {
-        true
-      }
-
-      if (canScheduleExact) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-          alarmManager.setExactAndAllowWhileIdle(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            pendingIntent
-          )
-        } else {
-          alarmManager.setExact(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            pendingIntent
-          )
-        }
-      } else {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-          alarmManager.setAndAllowWhileIdle(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            pendingIntent
-          )
-        } else {
-          alarmManager.set(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            pendingIntent
-          )
-        }
-      }
+      AlarmScheduler.scheduleAlarm(context, id, hour, minute, targetPackage, durationSeconds)
+      AlarmScheduler.saveSchedule(context, id, hour, minute, targetPackage, durationSeconds)
     }
 
     Function("cancelDailyBlock") { id: Int ->
-      val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-      val intent = Intent(context, BlockerReceiver::class.java)
-      val pendingIntent = PendingIntent.getBroadcast(
-        context,
-        id,
-        intent,
-        PendingIntent.FLAG_NO_CREATE or PendingIntent.FLAG_IMMUTABLE
-      )
-      if (pendingIntent != null) {
-        alarmManager.cancel(pendingIntent)
-        pendingIntent.cancel()
-      }
+      AlarmScheduler.cancelAlarm(context, id)
+      AlarmScheduler.removeSchedule(context, id)
     }
 
     Function("getInstalledApps") {
