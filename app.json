@@ -15,8 +15,13 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "com.szymonator.blockerapp"
     },
+    "plugins": [
+      "./modules/expo-habit-blocker/app.plugin.js",
+      "@react-native-community/datetimepicker"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }

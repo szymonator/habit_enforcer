@@ -1,0 +1,7 @@
+{
+  "name": "expo-habit-blocker",
+  "version": "1.0.0",
+  "description": "Habit blocker local native module",
+  "main": "src/HabitBlockerModule.ts",
+  "types": "src/HabitBlockerModule.ts"
+}

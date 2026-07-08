@@ -1,0 +1,1038 @@
+Initialized native services in: /Users/szymonator1625/.gradle/native
+Initialized jansi services in: /Users/szymonator1625/.gradle/native
+The client will now receive all logging from the daemon (pid: 35549). The daemon log file: /Users/szymonator1625/.gradle/daemon/9.3.1/daemon-35549.out.log
+Starting 8th build in daemon [uptime: 27 mins 32.348 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 2 GiB, non-heap usage: 52% of 512 MiB]
+Using 8 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=true, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=true, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Now considering [/Users/szymonator1625/Programming/blocker_app/android, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('@react-native/gradle-plugin/package.json', { paths: [require.resolve('react-native/package.json')] })
+Successfully started process 'command 'node''
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('expo-modules-autolinking/package.json', { paths: [require.resolve('expo/package.json')] })
+Successfully started process 'command 'node''
+Now considering [/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin, /Users/szymonator1625/Programming/blocker_app/android, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin] as hierarchies to watch
+Resolved plugin [id: 'org.gradle.toolchains.foojay-resolver-convention', version: '1.0.0']
+Now considering [/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin, /Users/szymonator1625/Programming/blocker_app/android, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin] as hierarchies to watch
+
+> Configure project :gradle-plugin
+Evaluating project ':gradle-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20', apply: false]
+Resolved plugin [id: 'com.ncorti.ktfmt.gradle', version: '0.22.0']
+
+> Configure project :gradle-plugin:react-native-gradle-plugin
+Evaluating project ':gradle-plugin:react-native-gradle-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin/react-native-gradle-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20']
+Resolved plugin [id: 'com.ncorti.ktfmt.gradle', version: '0.22.0']
+Resolved plugin [id: 'java-gradle-plugin']
+Build f0683395-afc2-4287-96a0-75bf094678b8 is started
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :gradle-plugin:settings-plugin
+Evaluating project ':gradle-plugin:settings-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin/settings-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20']
+Resolved plugin [id: 'com.ncorti.ktfmt.gradle', version: '0.22.0']
+Resolved plugin [id: 'java-gradle-plugin']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :gradle-plugin:shared
+Evaluating project ':gradle-plugin:shared' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin/shared/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20']
+Resolved plugin [id: 'com.ncorti.ktfmt.gradle', version: '0.22.0']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :gradle-plugin:shared-testutil
+Evaluating project ':gradle-plugin:shared-testutil' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin/shared-testutil/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20']
+Resolved plugin [id: 'com.ncorti.ktfmt.gradle', version: '0.22.0']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Resolved plugin [id: 'com.facebook.react.settings']
+
+> Configure project :expo-gradle-plugin
+Evaluating project ':expo-gradle-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20', apply: false]
+Resolved plugin [id: 'java-gradle-plugin']
+
+> Configure project :expo-gradle-plugin:expo-autolinking-plugin
+Evaluating project ':expo-gradle-plugin:expo-autolinking-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-autolinking-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm']
+Resolved plugin [id: 'java-gradle-plugin']
+Build 32368168-f7eb-46fd-8fbd-ff1f2c8162a6 is started
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :expo-gradle-plugin:expo-autolinking-plugin-shared
+Evaluating project ':expo-gradle-plugin:expo-autolinking-plugin-shared' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-autolinking-plugin-shared/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '1.9.24']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :expo-gradle-plugin:expo-autolinking-settings-plugin
+Evaluating project ':expo-gradle-plugin:expo-autolinking-settings-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-autolinking-settings-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm']
+Resolved plugin [id: 'java-gradle-plugin']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :expo-gradle-plugin:expo-max-sdk-override-plugin
+Evaluating project ':expo-gradle-plugin:expo-max-sdk-override-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-max-sdk-override-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm']
+Resolved plugin [id: 'java-gradle-plugin']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Resolved plugin [id: 'expo-autolinking-settings']
+Starting process 'command '/usr/libexec/java_home''. Working directory: /Users/szymonator1625/.gradle/daemon/9.3.1 Command: /usr/libexec/java_home -V
+Successfully started process 'command '/usr/libexec/java_home''
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1201,Execution worker,5,main]) started.
+Resolve mutations for :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1201,Execution worker,5,main]) started.
+:gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors (Thread[#1199,included builds,5,main]) started.
+:gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :gradle-plugin:shared:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :gradle-plugin:settings-plugin:pluginDescriptors (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:gradle-plugin:shared:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors (Thread[#1201,Execution worker,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors (Thread[#1201,Execution worker,5,main]) started.
+:gradle-plugin:settings-plugin:pluginDescriptors (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin (Thread[#1199,included builds,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':gradle-plugin:settings-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:settings-plugin:pluginDescriptors' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors' as it is up-to-date.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :gradle-plugin:settings-plugin:processResources (Thread[#1204,Execution worker Thread 4,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources (Thread[#1201,Execution worker,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:processResources (Thread[#1201,Execution worker,5,main]) started.
+:gradle-plugin:settings-plugin:processResources (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+Caching disabled for task ':gradle-plugin:settings-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:settings-plugin:processResources' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-settings-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:processResources' as it is up-to-date.
+
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+Caching disabled for task ':gradle-plugin:shared:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':gradle-plugin:shared:compileKotlin' as it is up-to-date.
+Resolve mutations for :gradle-plugin:shared:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:shared:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+Skipping task ':gradle-plugin:shared:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle-plugin:shared:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:shared:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+Skipping task ':gradle-plugin:shared:processResources' as it has no source files and no previous output files.
+Resolve mutations for :gradle-plugin:shared:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:shared:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+Skipping task ':gradle-plugin:shared:classes' as it has no actions.
+Resolve mutations for :gradle-plugin:shared:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:shared:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava (Thread[#1199,included builds,5,main]) started.
+
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+Caching disabled for task ':gradle-plugin:shared:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:shared:jar' as it is up-to-date.
+work action resolve shared.jar (project :gradle-plugin:shared) (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :gradle-plugin:settings-plugin:compileKotlin (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava NO-SOURCE
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources NO-SOURCE
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:processResources' as it has no source files and no previous output files.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:settings-plugin:compileKotlin (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:classes UP-TO-DATE
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:classes' as it has no actions.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin-shared:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin-shared:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:jar UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin-shared:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin-shared:jar' as it is up-to-date.
+work action resolve expo-autolinking-plugin-shared-1.0.jar (project :expo-gradle-plugin:expo-autolinking-plugin-shared) (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':gradle-plugin:settings-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':gradle-plugin:settings-plugin:compileKotlin' as it is up-to-date.
+Resolve mutations for :gradle-plugin:settings-plugin:compileJava (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:gradle-plugin:settings-plugin:compileJava (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+Skipping task ':gradle-plugin:settings-plugin:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle-plugin:settings-plugin:classes (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:gradle-plugin:settings-plugin:classes (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+Skipping task ':gradle-plugin:settings-plugin:classes' as it has no actions.
+Resolve mutations for :gradle-plugin:settings-plugin:jar (Thread[#1204,Execution worker Thread 4,5,main]) started.
+:gradle-plugin:settings-plugin:jar (Thread[#1204,Execution worker Thread 4,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+Caching disabled for task ':gradle-plugin:settings-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:settings-plugin:jar' as it is up-to-date.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava NO-SOURCE
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:classes UP-TO-DATE
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:classes' as it has no actions.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-settings-plugin:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-settings-plugin:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:jar UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-settings-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-settings-plugin:jar' as it is up-to-date.
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('expo-modules-autolinking/package.json', { paths: [require.resolve('expo/package.json')] })
+Successfully started process 'command 'node''
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --no-warnings --eval require('expo/bin/autolinking') expo-modules-autolinking resolve --platform android --json
+Successfully started process 'command 'node''
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('react-native/package.json')
+Successfully started process 'command 'node''
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('@react-native/gradle-plugin/package.json', { paths: [require.resolve('react-native/package.json')] })
+Successfully started process 'command 'node''
+Settings evaluated using settings file '/Users/szymonator1625/Programming/blocker_app/android/settings.gradle'.
+Now considering [/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin, /Users/szymonator1625/Programming/blocker_app/android] as hierarchies to watch
+Projects loaded. Root project using build file '/Users/szymonator1625/Programming/blocker_app/android/build.gradle'.
+Included projects: [root project 'blocker_app', project ':app', project ':expo', project ':expo-constants', project ':expo-habit-blocker', project ':expo-log-box', project ':expo-modules-core']
+Registering project ':expo-gradle-plugin' in composite build. Will substitute for module ':expo-gradle-plugin'.
+Registering project ':expo-gradle-plugin:expo-autolinking-plugin' in composite build. Will substitute for module 'expo.modules:expo-autolinking-plugin'.
+Registering project ':expo-gradle-plugin:expo-autolinking-plugin-shared' in composite build. Will substitute for module 'expo.modules:expo-autolinking-plugin-shared'.
+Registering project ':expo-gradle-plugin:expo-autolinking-settings-plugin' in composite build. Will substitute for module 'expo.modules:expo-autolinking-settings-plugin'.
+Registering project ':expo-gradle-plugin:expo-max-sdk-override-plugin' in composite build. Will substitute for module 'expo.modules:expo-max-sdk-override-plugin'.
+
+> Configure project :expo-module-gradle-plugin
+Evaluating project ':expo-module-gradle-plugin' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin/build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.1.20']
+Resolved plugin [id: 'java-gradle-plugin']
+Build 7176ee5a-a3e4-4659-a259-61be6e2afe25 is started
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Registering project ':expo-module-gradle-plugin' in composite build. Will substitute for module 'expo.modules:expo-module-gradle-plugin'.
+Registering project ':gradle-plugin' in composite build. Will substitute for module ':gradle-plugin-root'.
+Registering project ':gradle-plugin:react-native-gradle-plugin' in composite build. Will substitute for module 'com.facebook.react:react-native-gradle-plugin'.
+Registering project ':gradle-plugin:settings-plugin' in composite build. Will substitute for module 'com.facebook.react:settings-plugin'.
+Registering project ':gradle-plugin:shared' in composite build. Will substitute for module 'com.facebook.react:shared'.
+Registering project ':gradle-plugin:shared-testutil' in composite build. Will substitute for module 'com.facebook.react:shared-testutil'.
+Resolve mutations for :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1203,Execution worker Thread 3,5,main]) started.
+work action resolve expo-autolinking-plugin-shared-1.0.jar (project :expo-gradle-plugin:expo-autolinking-plugin-shared) (Thread[#1206,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1201,Execution worker,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+destroyer locations for task group 0 (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1203,Execution worker Thread 3,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:compileKotlin (Thread[#1207,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:compileKotlin (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :expo-module-gradle-plugin:pluginDescriptors (Thread[#1203,Execution worker Thread 3,5,main]) started.
+:expo-module-gradle-plugin:pluginDescriptors (Thread[#1203,Execution worker Thread 3,5,main]) started.
+
+> Task :expo-module-gradle-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':expo-module-gradle-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-module-gradle-plugin:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :expo-module-gradle-plugin:processResources (Thread[#1203,Execution worker Thread 3,5,main]) started.
+:expo-module-gradle-plugin:processResources (Thread[#1203,Execution worker Thread 3,5,main]) started.
+
+> Task :expo-module-gradle-plugin:processResources UP-TO-DATE
+Caching disabled for task ':expo-module-gradle-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-module-gradle-plugin:processResources' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:compileKotlin' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:compileJava' as it has no source files and no previous output files.
+:expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:processResources (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:compileJava (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:processResources' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:classes UP-TO-DATE
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:classes' as it has no actions.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:compileJava NO-SOURCE
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:compileJava' as it has no source files and no previous output files.
+
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':gradle-plugin:react-native-gradle-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':gradle-plugin:react-native-gradle-plugin:compileKotlin' as it is up-to-date.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:compileJava (Thread[#1207,Execution worker Thread 7,5,main]) started.
+other build task :gradle-plugin:react-native-gradle-plugin:compileKotlin (Thread[#1206,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:compileJava (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:processResources (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+Skipping task ':gradle-plugin:react-native-gradle-plugin:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:pluginDescriptors (Thread[#1207,Execution worker Thread 7,5,main]) started.
+other build task :gradle-plugin:react-native-gradle-plugin:compileJava (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:pluginDescriptors (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:processResources UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-max-sdk-override-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:processResources' as it is up-to-date.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:classes (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':gradle-plugin:react-native-gradle-plugin:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:react-native-gradle-plugin:pluginDescriptors' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-autolinking-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-autolinking-plugin:jar' as it is up-to-date.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:classes UP-TO-DATE
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:classes' as it has no actions.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:processResources (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:processResources (Thread[#1207,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-max-sdk-override-plugin:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+:expo-gradle-plugin:expo-max-sdk-override-plugin:jar (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+Caching disabled for task ':gradle-plugin:react-native-gradle-plugin:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:react-native-gradle-plugin:processResources' as it is up-to-date.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:classes (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:classes (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+Skipping task ':gradle-plugin:react-native-gradle-plugin:classes' as it has no actions.
+Resolve mutations for :gradle-plugin:react-native-gradle-plugin:jar (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:gradle-plugin:react-native-gradle-plugin:jar (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:jar UP-TO-DATE
+Caching disabled for task ':expo-gradle-plugin:expo-max-sdk-override-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-gradle-plugin:expo-max-sdk-override-plugin:jar' as it is up-to-date.
+
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+Caching disabled for task ':gradle-plugin:react-native-gradle-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle-plugin:react-native-gradle-plugin:jar' as it is up-to-date.
+work action resolve main (project :gradle-plugin:react-native-gradle-plugin) (Thread[#1207,Execution worker Thread 7,5,main]) started.
+work action resolve main (project :gradle-plugin:react-native-gradle-plugin) (Thread[#1207,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :expo-module-gradle-plugin:compileKotlin (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-module-gradle-plugin:compileKotlin (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-module-gradle-plugin:compileKotlin UP-TO-DATE
+Caching disabled for task ':expo-module-gradle-plugin:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':expo-module-gradle-plugin:compileKotlin' as it is up-to-date.
+Resolve mutations for :expo-module-gradle-plugin:compileJava (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-module-gradle-plugin:compileJava (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-module-gradle-plugin:compileJava NO-SOURCE
+Skipping task ':expo-module-gradle-plugin:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :expo-module-gradle-plugin:classes (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-module-gradle-plugin:classes (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-module-gradle-plugin:classes UP-TO-DATE
+Skipping task ':expo-module-gradle-plugin:classes' as it has no actions.
+Resolve mutations for :expo-module-gradle-plugin:jar (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-module-gradle-plugin:jar (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo-module-gradle-plugin:jar UP-TO-DATE
+Caching disabled for task ':expo-module-gradle-plugin:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':expo-module-gradle-plugin:jar' as it is up-to-date.
+
+> Configure project :app
+Evaluating project ':app' using build file '/Users/szymonator1625/Programming/blocker_app/android/app/build.gradle'.
+Using default execution profile
+ ℹ️  [33mApplying gradle plugin[0m '[32mexpo-max-sdk-override-plugin[0m'
+  [expo-max-sdk-override-plugin] This plugin will find all permissions declared with `android:maxSdkVersion`. If there exists a declaration with the `android:maxSdkVersion` annotation and another one without, the plugin will remove the annotation from the final merged manifest. In order to see a log with the changes run a clean build of the app.
+Build 0140f8d7-cc83-45e6-9ebd-ac8a82ffed6f is started
+Using Kotlin Gradle Plugin gradle85 variant
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+
+> Configure project :
+Evaluating root project 'blocker_app' using build file '/Users/szymonator1625/Programming/blocker_app/android/build.gradle'.
+Found project 'project :expo-gradle-plugin:expo-autolinking-plugin' as substitute for module 'expo.modules:expo-autolinking-plugin'.
+Found project 'project :expo-gradle-plugin:expo-max-sdk-override-plugin' as substitute for module 'expo.modules:expo-max-sdk-override-plugin'.
+Found project 'project :expo-module-gradle-plugin' as substitute for module 'expo.modules:expo-module-gradle-plugin'.
+Found project 'project :gradle-plugin:react-native-gradle-plugin' as substitute for module 'com.facebook.react:react-native-gradle-plugin'.
+Found project 'project :expo-gradle-plugin:expo-autolinking-plugin-shared' as substitute for module 'expo.modules:expo-autolinking-plugin-shared'.
+Found project 'project :gradle-plugin:react-native-gradle-plugin' as substitute for module 'com.facebook.react:react-native-gradle-plugin'.
+Found project 'project :expo-gradle-plugin:expo-autolinking-plugin-shared' as substitute for module 'expo.modules:expo-autolinking-plugin-shared'.
+Ignoring listeners of task graph ready event, as this build (:expo-gradle-plugin) has already executed work.
+Ignoring listeners of task graph ready event, as this build (:gradle-plugin) has already executed work.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:compileKotlin (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:compileJava (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:compileJava (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:processResources (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:classes (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:classes (Thread[#1199,included builds,5,main]) started.
+Resolve mutations for :expo-gradle-plugin:expo-autolinking-plugin:jar (Thread[#1199,included builds,5,main]) started.
+:expo-gradle-plugin:expo-autolinking-plugin:jar (Thread[#1199,included builds,5,main]) started.
+[32m[ExpoRootProject][0m Using the following versions:
+  - buildTools:  [32m36.0.0[0m
+  - minSdk:      [32m24[0m
+  - compileSdk:  [32m36[0m
+  - targetSdk:   [32m36[0m
+  - ndk:         [32m27.1.12297006[0m
+  - kotlin:      [32m2.1.20[0m
+  - ksp:         [32m2.1.20-2.0.1[0m
+
+> Configure project :expo-log-box
+Evaluating project ':expo-log-box' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo/node_modules/@expo/log-box/android/build.gradle'.
+Resolved plugin [id: 'com.android.library']
+Resolved plugin [id: 'expo-module-gradle-plugin']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+
+> Configure project :expo-constants
+Evaluating project ':expo-constants' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo/node_modules/expo-constants/android/build.gradle'.
+Resolved plugin [id: 'com.android.library']
+Resolved plugin [id: 'expo-module-gradle-plugin']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/node_modules/expo/node_modules/expo-constants/android Command: node -e console.log(require('path').dirname(require.resolve('expo-constants/package.json')));
+Successfully started process 'command 'node''
+
+> Configure project :expo-habit-blocker
+Evaluating project ':expo-habit-blocker' using build file '/Users/szymonator1625/Programming/blocker_app/modules/expo-habit-blocker/android/build.gradle'.
+Resolved plugin [id: 'com.android.library']
+Resolved plugin [id: 'expo-module-gradle-plugin']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+
+> Configure project :expo-modules-core
+Evaluating project ':expo-modules-core' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/android/build.gradle'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --print require.resolve('react-native/package.json')
+Successfully started process 'command 'node''
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+C/C++: android.ndkVersion from module build.gradle is [27.1.12297006]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /Users/szymonator1625/Library/Android/sdk
+
+> Configure project :expo
+Evaluating project ':expo' using build file '/Users/szymonator1625/Programming/blocker_app/node_modules/expo/android/build.gradle'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+
+Using expo modules
+  - [32mexpo-log-box[0m (57.0.0)
+  - [32mexpo-constants[0m (57.0.3)
+  - [32mexpo-habit-blocker[0m (0.1.0)
+  - [32mexpo-modules-core[0m (57.0.3)
+  - [33m[📦][0m [32mexpo-dom-webview[0m (57.0.0)
+  - [33m[📦][0m [32mexpo-asset[0m (57.0.3)
+  - [33m[📦][0m [32mexpo-file-system[0m (57.0.0)
+  - [33m[📦][0m [32mexpo-font[0m (57.0.0)
+  - [33m[📦][0m [32mexpo-keep-awake[0m (57.0.0)
+  - [33m[📦][0m [32mexpo-status-bar[0m (57.0.0)
+
+All projects evaluated.
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node --no-warnings --eval require('expo/bin/autolinking') expo-modules-autolinking mirror-kotlin-inline-modules --kotlin-files-mirror-directory /Users/szymonator1625/Programming/blocker_app/node_modules/expo/android/src/main/java/inline/modules --inline-modules-list-directory /Users/szymonator1625/Programming/blocker_app/node_modules/expo/android/build/inline/modules --watched-directories-serialized []
+Successfully started process 'command 'node''
+Task path ':app:configureCMakeDebug' matched project ':app'
+Task name matched 'configureCMakeDebug'
+Selected primary task 'configureCMakeDebug' from project :app
+Tasks to be executed: [task ':app:generateAutolinkingNewArchitectureFiles', task ':app:generateAutolinkingPackageList', task ':app:generateCodegenSchemaFromJavaScript', task ':app:generateCodegenArtifactsFromSchema', task ':app:generateReactNativeEntryPoint', task ':expo:generatePackagesList', task ':expo:preBuild', task ':expo-constants:createExpoConfig', task ':expo-constants:preBuild', task ':expo-habit-blocker:preBuild', task ':expo-log-box:preBuild', task ':expo-modules-core:preBuild', task ':app:preBuild', task ':app:preDebugBuild', task ':app:configureCMakeDebug[arm64-v8a]', task ':app:configureCMakeDebug[armeabi-v7a]', task ':app:configureCMakeDebug[x86]', task ':app:configureCMakeDebug[x86_64]', task ':app:configureCMakeDebug']
+Tasks that were excluded: []
+Resolve mutations for :app:generateAutolinkingNewArchitectureFiles (Thread[#1205,Execution worker Thread 5,5,main]) started.
+Resolve mutations for :expo-constants:createExpoConfig (Thread[#1206,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :expo:generatePackagesList (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :expo-habit-blocker:preBuild (Thread[#1203,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :expo-log-box:preBuild (Thread[#1201,Execution worker,5,main]) started.
+:expo-constants:createExpoConfig (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:expo-log-box:preBuild (Thread[#1201,Execution worker,5,main]) started.
+:expo:generatePackagesList (Thread[#1202,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :expo-modules-core:preBuild (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:expo-habit-blocker:preBuild (Thread[#1203,Execution worker Thread 3,5,main]) started.
+:expo-modules-core:preBuild (Thread[#1207,Execution worker Thread 7,5,main]) started.
+:app:generateAutolinkingNewArchitectureFiles (Thread[#1205,Execution worker Thread 5,5,main]) started.
+
+> Task :expo-habit-blocker:preBuild UP-TO-DATE
+Skipping task ':expo-habit-blocker:preBuild' as it has no actions.
+
+> Task :expo-log-box:preBuild UP-TO-DATE
+Skipping task ':expo-log-box:preBuild' as it has no actions.
+
+> Task :expo-modules-core:preBuild UP-TO-DATE
+Skipping task ':expo-modules-core:preBuild' as it has no actions.
+
+> Task :expo:generatePackagesList UP-TO-DATE
+Caching disabled for task ':expo:generatePackagesList' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':expo:generatePackagesList' as it is up-to-date.
+Resolve mutations for :expo:preBuild (Thread[#1202,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateAutolinkingNewArchitectureFiles UP-TO-DATE
+Caching disabled for task ':app:generateAutolinkingNewArchitectureFiles' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':app:generateAutolinkingNewArchitectureFiles' as it is up-to-date.
+Resolve mutations for :app:generateAutolinkingPackageList (Thread[#1205,Execution worker Thread 5,5,main]) started.
+:expo:preBuild (Thread[#1207,Execution worker Thread 7,5,main]) started.
+
+> Task :expo:preBuild UP-TO-DATE
+Skipping task ':expo:preBuild' as it has no actions.
+:app:generateAutolinkingPackageList (Thread[#1205,Execution worker Thread 5,5,main]) started.
+
+> Task :app:generateAutolinkingPackageList UP-TO-DATE
+Caching disabled for task ':app:generateAutolinkingPackageList' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':app:generateAutolinkingPackageList' as it is up-to-date.
+Resolve mutations for :app:generateCodegenSchemaFromJavaScript (Thread[#1205,Execution worker Thread 5,5,main]) started.
+:app:generateCodegenSchemaFromJavaScript (Thread[#1205,Execution worker Thread 5,5,main]) started.
+
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+Skipping task ':app:generateCodegenSchemaFromJavaScript' as task onlyIf 'Task satisfies onlyIf spec' is false.
+Resolve mutations for :app:generateCodegenArtifactsFromSchema (Thread[#1205,Execution worker Thread 5,5,main]) started.
+:app:generateCodegenArtifactsFromSchema (Thread[#1205,Execution worker Thread 5,5,main]) started.
+
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+Skipping task ':app:generateCodegenArtifactsFromSchema' as task onlyIf 'Task satisfies onlyIf spec' is false.
+Resolve mutations for :app:generateReactNativeEntryPoint (Thread[#1205,Execution worker Thread 5,5,main]) started.
+:app:generateReactNativeEntryPoint (Thread[#1205,Execution worker Thread 5,5,main]) started.
+
+> Task :app:generateReactNativeEntryPoint UP-TO-DATE
+Caching disabled for task ':app:generateReactNativeEntryPoint' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Skipping task ':app:generateReactNativeEntryPoint' as it is up-to-date.
+
+> Task :expo-constants:createExpoConfig
+Custom actions are attached to task ':expo-constants:createExpoConfig'.
+Caching disabled for task ':expo-constants:createExpoConfig' because:
+  Build cache is disabled
+  Gradle would require more information to cache this task
+Task ':expo-constants:createExpoConfig' is not up-to-date because:
+  Task.upToDateWhen is false.
+Starting process 'command 'node''. Working directory: /Users/szymonator1625/Programming/blocker_app/android Command: node /Users/szymonator1625/Programming/blocker_app/node_modules/expo/node_modules/expo-constants/scripts/getAppConfig.js /Users/szymonator1625/Programming/blocker_app/android /Users/szymonator1625/Programming/blocker_app/node_modules/expo/node_modules/expo-constants/android/build/generated/assets/expo-constants
+Successfully started process 'command 'node''
+The NODE_ENV environment variable is required but was not specified. Ensure the project is bundled with Expo CLI or NODE_ENV is set. Using only .env.local and .env
+Resolve mutations for :expo-constants:preBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:expo-constants:preBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :expo-constants:preBuild
+Skipping task ':expo-constants:preBuild' as it has no actions.
+Resolve mutations for :app:preBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:app:preBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :app:preBuild
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:app:preDebugBuild (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :app:preDebugBuild
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:configureCMakeDebug[arm64-v8a] (Thread[#1206,Execution worker Thread 6,5,main]) started.
+:app:configureCMakeDebug[arm64-v8a] (Thread[#1206,Execution worker Thread 6,5,main]) started.
+
+> Task :app:configureCMakeDebug[arm64-v8a] FAILED
+Caching disabled for task ':app:configureCMakeDebug[arm64-v8a]' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:configureCMakeDebug[arm64-v8a]' is not up-to-date because:
+  Task.upToDateWhen is false.
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : Start JSON generation. Platform version: 24 min SDK version: arm64-v8a
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : rebuilding JSON /Users/szymonator1625/Programming/blocker_app/android/app/.cxx/Debug/2a62c581/arm64-v8a/android_gradle_build.json due to:
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : - no fingerprint file, will remove stale configuration folder
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : /Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home/bin/java \
+  --class-path \
+  /Users/szymonator1625/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar \
+  com.google.prefab.cli.AppKt \
+  --build-system \
+  cmake \
+  --platform \
+  android \
+  --abi \
+  arm64-v8a \
+  --os-version \
+  24 \
+  --stl \
+  c++_shared \
+  --ndk-version \
+  27 \
+  --output \
+  /var/folders/g2/xm4y7yrj2wv5mh4k8w8cn7m80000gn/T/agp-prefab-staging3309385945974732009/staged-cli-output \
+  /Users/szymonator1625/.gradle/caches/9.3.1/transforms/e34c881ac1b85a96a13850d4b3e5bd50/transformed/react-android-0.86.0-debug/prefab \
+  /Users/szymonator1625/.gradle/caches/9.3.1/transforms/c05eee7b3fbef58e0a01bfdea96c05d2/transformed/hermes-android-250829098.0.14-debug/prefab \
+  /Users/szymonator1625/.gradle/caches/9.3.1/transforms/a380509ee370312f3a5187e825a1b544/transformed/fbjni-0.7.0/prefab
+
+Starting process 'command '/Users/szymonator1625/Programming/blocker_app/android/app/build/intermediates/cxx/Debug/2a62c581/logs/arm64-v8a/prefab_command''. Working directory: /Users/szymonator1625/Programming/blocker_app/android/app Command: /Users/szymonator1625/Programming/blocker_app/android/app/build/intermediates/cxx/Debug/2a62c581/logs/arm64-v8a/prefab_command 
+Successfully started process 'command '/Users/szymonator1625/Programming/blocker_app/android/app/build/intermediates/cxx/Debug/2a62c581/logs/arm64-v8a/prefab_command''
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : Received process result: 0
+C/C++: /Users/szymonator1625/Programming/blocker_app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt debug|arm64-v8a : Writing build model to /Users/szymonator1625/Programming/blocker_app/android/app/build/intermediates/cxx/Debug/2a62c581/logs/arm64-v8a/build_model.json
+Build 32368168-f7eb-46fd-8fbd-ff1f2c8162a6 is closed
+Build 7176ee5a-a3e4-4659-a259-61be6e2afe25 is closed
+Build f0683395-afc2-4287-96a0-75bf094678b8 is closed
+Build 0140f8d7-cc83-45e6-9ebd-ac8a82ffed6f is closed
+
+[Incubating] Problems report is available at: file:///Users/szymonator1625/Programming/blocker_app/android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:configureCMakeDebug[arm64-v8a]'.
+> WARNING: A restricted method in java.lang.System has been called
+
+* Try:
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:configureCMakeDebug[arm64-v8a]'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:288)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:133)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:121)
+	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.DefaultNodeExecutor.executeLocalTaskNode(DefaultNodeExecutor.java:55)
+	at org.gradle.execution.plan.DefaultNodeExecutor.execute(DefaultNodeExecutor.java:34)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:355)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:343)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:339)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:84)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:339)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:328)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: java.lang.IllegalStateException: WARNING: A restricted method in java.lang.System has been called
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt$reportErrors$1$1.invoke(GeneratePrefabPackages.kt:304)
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt$reportErrors$1$1.invoke(GeneratePrefabPackages.kt:269)
+	at kotlin.io.TextStreamsKt.forEachLine(ReadWrite.kt:160)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine(FileReadWrite.kt:244)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine$default(FileReadWrite.kt:242)
+	at org.gradle.internal.classpath.MethodHandleUtils.invokeKotlinStaticDefault(MethodHandleUtils.java:42)
+	at org.gradle.internal.classpath.declarations.KotlinStdlibFileInterceptors.intercept_forEachLine(KotlinStdlibFileInterceptors.java:94)
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt.reportErrors(GeneratePrefabPackages.kt:269)
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt$createPrefabBuildSystemGlue$1$1.invoke(GeneratePrefabPackages.kt:114)
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt$createPrefabBuildSystemGlue$1$1.invoke(GeneratePrefabPackages.kt:114)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.executeProcess(ExecuteProcess.kt:118)
+	at com.android.build.gradle.internal.cxx.process.ExecuteProcessKt.executeProcess$default(ExecuteProcess.kt:85)
+	at com.android.build.gradle.tasks.GeneratePrefabPackagesKt.createPrefabBuildSystemGlue(GeneratePrefabPackages.kt:110)
+	at com.android.build.gradle.tasks.ExternalNativeJsonGenerator$configureOneAbi$1$1$2.invoke(ExternalNativeJsonGenerator.kt:215)
+	at com.android.build.gradle.tasks.ExternalNativeJsonGenerator$configureOneAbi$1$1$2.invoke(ExternalNativeJsonGenerator.kt:213)
+	at com.android.build.gradle.internal.cxx.timing.TimingEnvironmentKt.time(TimingEnvironment.kt:32)
+	at com.android.build.gradle.tasks.ExternalNativeJsonGenerator.configureOneAbi(ExternalNativeJsonGenerator.kt:213)
+	at com.android.build.gradle.tasks.ExternalNativeJsonGenerator.configure(ExternalNativeJsonGenerator.kt:113)
+	at com.android.build.gradle.tasks.ExternalNativeBuildJsonTask.doTaskAction(ExternalNativeBuildJsonTask.kt:89)
+	at com.android.build.gradle.internal.tasks.UnsafeOutputsTask$taskAction$$inlined$recordTaskAction$1.invoke(BaseTask.kt:59)
+	at com.android.build.gradle.internal.tasks.Blocks.recordSpan(Blocks.java:51)
+	at com.android.build.gradle.internal.tasks.UnsafeOutputsTask.taskAction(UnsafeOutputsTask.kt:81)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:259)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:244)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:227)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:210)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:176)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:110)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:64)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:61)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:61)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:47)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:51)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:29)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.executeMutable(RemovePreviousOutputsStep.java:70)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.executeMutable(RemovePreviousOutputsStep.java:40)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:62)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:27)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.executeMutable(ResolveInputChangesStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.executeMutable(ResolveInputChangesStep.java:28)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:192)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:76)
+	at org.gradle.internal.Either$Right.fold(Either.java:176)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:74)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:49)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.executeMutable(ResolveChangesStep.java:63)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.executeMutable(ResolveChangesStep.java:34)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:64)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:42)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:77)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:133)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:59)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.executeMutable(HandleStaleOutputsStep.java:77)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.executeMutable(HandleStaleOutputsStep.java:43)
+	at org.gradle.internal.execution.steps.MutableStep.execute(MutableStep.java:25)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:305)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:44)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:31)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:68)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:132)
+	... 30 more
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2s
+34 actionable tasks: 2 executed, 32 up-to-date
+Watched directory hierarchies: [/Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-core/expo-module-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/expo-modules-autolinking/android/expo-gradle-plugin, /Users/szymonator1625/Programming/blocker_app/node_modules/@react-native/gradle-plugin, /Users/szymonator1625/Programming/blocker_app/android]
