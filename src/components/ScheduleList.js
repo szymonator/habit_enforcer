@@ -35,7 +35,9 @@ export default function ScheduleList({
           schedules.map((item) => (
             <View key={item.id} style={styles.scheduleCard}>
               <View style={styles.scheduleInfo}>
-                <Text style={styles.scheduleTime}>{item.hour}:{item.minute}</Text>
+                <Text style={styles.scheduleTime}>
+                  {String(item.hour).padStart(2, '0')}:{String(item.minute).padStart(2, '0')}
+                </Text>
                 <View style={styles.scheduleDetails}>
                   <Text style={styles.scheduleAppName} numberOfLines={1}>
                     {item.targetApp.label}

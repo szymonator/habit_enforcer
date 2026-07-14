@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
 import { pickerStyles as styles } from '../styles/pickerStyles';
 import { colors } from '../styles/theme';
@@ -20,6 +20,16 @@ export default function AppPicker({
   onSelect,
   onClose,
 }) {
+  const renderAppItem = useCallback(
+    ({ item }) => (
+      <TouchableOpacity style={styles.appItem} onPress={() => onSelect(item)}>
+        <Text style={styles.appItemLabel}>{item.label}</Text>
+        <Text style={styles.appItemPackage}>{item.packageName}</Text>
+      </TouchableOpacity>
+    ),
+    [onSelect],
+  );
+
   return (
     <View style={styles.pickerContainer}>
       <View style={styles.pickerHeader}>
@@ -46,12 +56,7 @@ export default function AppPicker({
         <FlatList
           data={filteredApps}
           keyExtractor={(item) => item.packageName}
-          renderItem={({ item }) => (
-            <TouchableOpacity style={styles.appItem} onPress={() => onSelect(item)}>
-              <Text style={styles.appItemLabel}>{item.label}</Text>
-              <Text style={styles.appItemPackage}>{item.packageName}</Text>
-            </TouchableOpacity>
-          )}
+          renderItem={renderAppItem}
           ItemSeparatorComponent={AppItemSeparator}
           ListEmptyComponent={
             <Text style={styles.emptyText}>No launchable applications found.</Text>

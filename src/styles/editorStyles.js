@@ -102,25 +102,4 @@ export const editorStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
-  actionButtonRow: {
-    flexDirection: 'row',
-  },
-  buttonSecondaryFlex: {
-    flex: 1,
-    marginRight: spacing.sm,
-  },
-  buttonDanger: {
-    backgroundColor: colors.dangerBg,
-    borderWidth: 1,
-    borderColor: colors.dangerBorder,
-    borderRadius: radii.lg,
-    padding: 14,
-    alignItems: 'center',
-    flex: 1,
-  },
-  buttonDangerText: {
-    color: colors.dangerText,
-    fontWeight: '600',
-    fontSize: 14,
-  },
 });

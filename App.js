@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StatusBar, Alert } from 'react-native';
+import { View, Text, StatusBar, Alert, Modal } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HabitBlockerModule from './modules/expo-habit-blocker/src/HabitBlockerModule';
 
@@ -32,21 +32,18 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoadingApps, setIsLoadingApps] = useState(false);
 
-  const loadApps = () => {
+  const loadApps = async () => {
     setIsLoadingApps(true);
     setShowAppPicker(true);
-    // Defer heavy PM query so the spinner renders first
-    setTimeout(() => {
-      try {
-        const appList = HabitBlockerModule.getInstalledApps();
-        setApps(appList);
-        setFilteredApps(appList);
-      } catch (e) {
-        Alert.alert('Error', 'Failed to get installed apps');
-      } finally {
-        setIsLoadingApps(false);
-      }
-    }, 100);
+    try {
+      const appList = await HabitBlockerModule.getInstalledApps();
+      setApps(appList);
+      setFilteredApps(appList);
+    } catch (e) {
+      Alert.alert('Error', 'Failed to get installed apps');
+    } finally {
+      setIsLoadingApps(false);
+    }
   };
 
   const handleSearch = (text) => {
@@ -86,39 +83,44 @@ export default function App() {
   // --- Render ---
 
   const renderContent = () => {
-    if (showAppPicker) {
-      return (
-        <AppPicker
-          apps={apps}
-          filteredApps={filteredApps}
-          isLoading={isLoadingApps}
-          searchQuery={searchQuery}
-          onSearch={handleSearch}
-          onSelect={handleSelectApp}
-          onClose={() => setShowAppPicker(false)}
-        />
-      );
-    }
-
     if (viewMode === 'edit') {
       return (
-        <ScheduleEditor
-          key={editingSchedule?.id ?? 'new'}
-          editingSchedule={editingSchedule}
-          selectedApp={selectedApp}
-          schedules={schedules}
-          saveSchedules={saveSchedules}
-          hasOverlayPermission={permissions.hasOverlayPermission}
-          hasUsagePermission={permissions.hasUsagePermission}
-          hasAlarmPermission={permissions.hasAlarmPermission}
-          onLoadApps={loadApps}
-          onGoBack={() => {
-            setViewMode('home');
-            setEditingSchedule(null);
-          }}
-          isScrollEnabled={isScrollEnabled}
-          setIsScrollEnabled={setIsScrollEnabled}
-        />
+        <View style={{ flex: 1 }}>
+          <ScheduleEditor
+            key={editingSchedule?.id ?? 'new'}
+            editingSchedule={editingSchedule}
+            selectedApp={selectedApp}
+            schedules={schedules}
+            saveSchedules={saveSchedules}
+            hasOverlayPermission={permissions.hasOverlayPermission}
+            hasUsagePermission={permissions.hasUsagePermission}
+            hasAlarmPermission={permissions.hasAlarmPermission}
+            onLoadApps={loadApps}
+            onGoBack={() => {
+              setViewMode('home');
+              setEditingSchedule(null);
+            }}
+            isScrollEnabled={isScrollEnabled}
+            setIsScrollEnabled={setIsScrollEnabled}
+          />
+          <Modal
+            visible={showAppPicker}
+            animationType="slide"
+            onRequestClose={() => setShowAppPicker(false)}
+          >
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#0F172A' }}>
+              <AppPicker
+                apps={apps}
+                filteredApps={filteredApps}
+                isLoading={isLoadingApps}
+                searchQuery={searchQuery}
+                onSearch={handleSearch}
+                onSelect={handleSelectApp}
+                onClose={() => setShowAppPicker(false)}
+              />
+            </SafeAreaView>
+          </Modal>
+        </View>
       );
     }
 

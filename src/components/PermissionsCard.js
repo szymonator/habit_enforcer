@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Platform } from 'react-native';
-import { Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Platform, Alert } from 'react-native';
 import { homeStyles } from '../styles/homeStyles';
 import { permissionsStyles as styles } from '../styles/permissionsStyles';
 

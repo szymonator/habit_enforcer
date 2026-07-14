@@ -24,11 +24,12 @@ export default function ScheduleEditor({
   isScrollEnabled,
   setIsScrollEnabled,
 }) {
+  const now = new Date();
   const [triggerHour, setTriggerHour] = useState(
-    editingSchedule?.hour ?? DEFAULT_SCHEDULE_FORM.triggerHour,
+    editingSchedule?.hour ?? now.getHours().toString().padStart(2, '0'),
   );
   const [triggerMinute, setTriggerMinute] = useState(
-    editingSchedule?.minute ?? DEFAULT_SCHEDULE_FORM.triggerMinute,
+    editingSchedule?.minute ?? now.getMinutes().toString().padStart(2, '0'),
   );
   const [durationMinutes, setDurationMinutes] = useState(
     editingSchedule?.durationMinutes ?? DEFAULT_SCHEDULE_FORM.durationMinutes,
@@ -121,36 +122,6 @@ export default function ScheduleEditor({
     }
   };
 
-  const handleStartTest = () => {
-    if (!selectedApp) {
-      Alert.alert('Target App Required', 'Please select a target app first.');
-      return;
-    }
-    if (!hasOverlayPermission || !hasUsagePermission) {
-      Alert.alert('Permissions Required', 'Both permissions must be granted to run the blocker.');
-      return;
-    }
-
-    try {
-      HabitBlockerModule.startBlockService(selectedApp.packageName, 60, true);
-      Alert.alert(
-        'Test Block Started',
-        `A 1-minute test block is active. Open ${selectedApp.label} to run down the timer. Exiting the app will block the screen.`,
-        [{ text: 'OK' }],
-      );
-    } catch (e) {
-      Alert.alert('Error', 'Failed to start test block service');
-    }
-  };
-
-  const handleStopService = () => {
-    try {
-      HabitBlockerModule.stopBlockService();
-      Alert.alert('Success', 'Blocker service stopped successfully.');
-    } catch (e) {
-      Alert.alert('Error', 'Failed to stop service');
-    }
-  };
 
 
   return (
@@ -228,19 +199,6 @@ export default function ScheduleEditor({
             {editingSchedule ? 'Update Daily Block' : 'Save & Schedule Daily Block'}
           </Text>
         </TouchableOpacity>
-
-        <View style={styles.actionButtonRow}>
-          <TouchableOpacity
-            style={[homeStyles.buttonSecondary, styles.buttonSecondaryFlex]}
-            onPress={handleStartTest}
-          >
-            <Text style={homeStyles.buttonSecondaryText}>Test Block Instantly</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.buttonDanger} onPress={handleStopService}>
-            <Text style={styles.buttonDangerText}>Force Stop Service</Text>
-          </TouchableOpacity>
-        </View>
       </View>
     </ScrollView>
   );

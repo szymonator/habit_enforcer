@@ -11,7 +11,7 @@ declare class HabitBlockerModule extends NativeModule {
   stopBlockService(): void;
   scheduleDailyBlock(id: number, hour: number, minute: number, targetPackage: string, durationSeconds: number): void;
   cancelDailyBlock(id: number): void;
-  getInstalledApps(): Array<{ packageName: string; label: string }>;
+  getInstalledApps(): Promise<Array<{ packageName: string; label: string }>>;
 }
 
 export default requireNativeModule<HabitBlockerModule>('HabitBlocker');

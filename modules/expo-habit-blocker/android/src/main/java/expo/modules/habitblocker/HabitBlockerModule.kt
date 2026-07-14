@@ -116,7 +116,7 @@ class HabitBlockerModule : Module() {
       AlarmScheduler.removeSchedule(context, id)
     }
 
-    Function("getInstalledApps") {
+    AsyncFunction("getInstalledApps") {
       val pm = context.packageManager
       val apps = pm.getInstalledPackages(0)
       val result = mutableListOf<Map<String, String>>()
